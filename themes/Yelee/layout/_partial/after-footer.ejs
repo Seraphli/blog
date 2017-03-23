@@ -13,10 +13,13 @@
         global: theme.open_in_new.global
     }) %>
 <%- partial('tab-title-change') %>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+<% if (theme.visit_counter.on) { %>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% } %>
 
-<!--page counter part-->
+
+<% if (theme.leancloud.on) { %>
+<!--page counter part using leancloud-->
 <script>
 function addSiteCount (Counter) {
     var query=new AV.Query(Counter);
@@ -27,14 +30,15 @@ function addSiteCount (Counter) {
         if(results.length>0)
         {
             var counter=results[0];
-            counter.fetchWhenSave(true); //get recent result
+            // counter.fetchWhenSave(true); //get recent result
             counter.increment("time");
-            counter.save();
+            counter.save(null, {fetchWhenSave: true});
         }
         else
         {
             var newcounter=new Counter();
-            newcounter.set("time",1);
+            newcounter.set("url", url)
+            newcounter.set("time", 1);
             newcounter.save(null,{
                 success: function(newcounter){
                 //alert('New object created');
@@ -55,16 +59,17 @@ $(function(){
 $(function(){
     var Counter=AV.Object.extend('BlogVisit');
     var query=new AV.Query(Counter);
-    query.find({
-        success: function(results){
-                var counter=results[0];
-                var c = document.getElementById('leancloud_value_site_uv');
-                c && (c.innerHTML = counter)
-            },
-        error: function(error){
-            alert("Error:"+error.code+" "+error.message);
-        }
-        }
-    )
+    url='seraphli.github.io';
+    query.equalTo("url",url);
+    query.find().then(function(results) {
+        var counter=results[0];
+        var c = document.getElementById("leancloud_value_site_pv");
+        c && (c.innerHTML = counter.get("time"))
+        var b = document.getElementById("leancloud_container_site_pv");
+        b && (b.style.display = "inline")
+    }, function(error) {
+        alert('Error:'+error.code+" "+error.message);
+    });
 });
 </script>
+<% } %>
