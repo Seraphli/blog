@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Seraphli's Blog
-subtitle: Work in the Dark. To serve the light.
+title: Cyber Assassin Guild
+subtitle: "Work in the Dark. To serve the light."
 description:
-author: John Doe
+author: SErAphLi
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://seraphli.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,3 +71,20 @@ deploy:
   type: git
   repo: https://github.com/Seraphli/seraphli.github.io.git
   branch: master
+
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+
+# Search
+search:
+  path: search.xml
+  field: post
+
+# Sitemap
+sitemap:
+  path: sitemap.xml

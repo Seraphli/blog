@@ -1,0 +1,70 @@
+<% if (theme.github_widget){ %>
+    <%- js('js/GithubRepoWidget') %>
+<% } %>
+<script data-main="<%-config.root%>js/main.js" src="<%- theme.CDN.require %>"></script>
+<%- partial('_partial/background') %>
+<%- partial('comments/count-comment') %>
+<%- partial('google-analytics') %>
+<% if (theme.mathjax){ %>
+    <%- partial('mathjax') %>
+<% } %>
+<%- partial('scrolling-button') %>
+<%- partial('open-in-new-tab', {
+        global: theme.open_in_new.global
+    }) %>
+<%- partial('tab-title-change') %>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<!--page counter part-->
+<script>
+function addSiteCount (Counter) {
+    var query=new AV.Query(Counter);
+    url='seraphli.github.io';
+    query.equalTo("url",url);
+    query.find().then(function(results) {
+        // results is an array of AV.Object.
+        if(results.length>0)
+        {
+            var counter=results[0];
+            counter.fetchWhenSave(true); //get recent result
+            counter.increment("time");
+            counter.save();
+        }
+        else
+        {
+            var newcounter=new Counter();
+            newcounter.set("time",1);
+            newcounter.save(null,{
+                success: function(newcounter){
+                //alert('New object created');
+                },
+                error: function(newcounter,error){
+                alert('Failed to create');
+                }
+            });
+        }
+    }, function(error) {
+        alert('Error:'+error.code+" "+error.message);
+    });
+}
+$(function(){
+    var Counter=AV.Object.extend('BlogVisit');
+    addSiteCount(Counter);
+});
+$(function(){
+    var Counter=AV.Object.extend('BlogVisit');
+    var query=new AV.Query(Counter);
+    query.find({
+        success: function(results){
+                var counter=results[0];
+                var c = document.getElementById('leancloud_value_site_uv');
+                c && (c.innerHTML = counter)
+            },
+        error: function(error){
+            alert("Error:"+error.code+" "+error.message);
+        }
+        }
+    )
+});
+</script>
