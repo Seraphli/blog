@@ -7,11 +7,11 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页: /
-  所有文章: /archives/
-  #随笔: /tags/随笔
-  标签云: /tags/
-  关于我: /about/
+  Main: /
+  Archives: /archives/
+  Categories: /categories/
+  Tags: /tags/
+  About: /about/
 
 
 # Link to your avatar | 填写头像地址
@@ -143,13 +143,13 @@ blockquote_style:
 
 # Headings Style | 标题风格
 ## 0-Yelee, 1-Yilia, 2-GitHub
-heading_style: 0 # Value: 0 - 2
+heading_style: 1 # Value: 0 - 2
 
 ## List style type (ul) | 无序列表项标记样式
 list_style: 0  # value: 0 - 12 可选
 
 # 左边栏宽度 px
-left_col_width: 300
+left_col_width: 500
 
 # Copyright info. of post | 文末版权信息
 copyright: true
@@ -171,7 +171,7 @@ jquery_ui: true
 
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
-  on: false
+  on: true
   max_width: 60 # em
 
 # >>> Small features | 小功能设置 <<<
@@ -231,7 +231,7 @@ tab_title_change:
 ## Insatall below plugin to take effect | 使用搜索需先安装对应插件
 ## https://github.com/PaicHyperionDev/hexo-generator-search
 search: 
-  #on: true
+  on: true
   onload: false
   ## true: get search.xml file when the page has loaded
   ## false: get the file when search box gets focus
