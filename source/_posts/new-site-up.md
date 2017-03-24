@@ -21,6 +21,18 @@ It takes about two days to build this site. First I was trying to build a static
 
 Although it seems easy on the official website, it still has so much parts to customize, like selecting a theme. I spent about half the day and found this theme called "Yelee". But it don't have the functionality to count visit, so I spent 6 hours writing my own site visit counter, using leancloud.
 
+# What packages I install
+
+1. hexo-abbrlink
+2. hexo-admin
+3. hexo-deployer-git
+4. hexo-generator-seo-friendly-sitemap
+5. hexo-browsersync
+
+```bash
+npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo-friendly-sitemap hexo-browsersync
+```
+
 # Some mistakes I made when building
 
 1. YAML need to add a space after colon
@@ -28,6 +40,8 @@ Although it seems easy on the official website, it still has so much parts to cu
 
 # Next thing I need to do
 
-- [ ] Change avatar
+- [ ] Write page count code
+- [x] Change avatar
+- [ ] Process background images in photoshop
 - [ ] Change background
 - [ ] Build up my own categories page using [API](https://hexo.io/zh-cn/docs/helpers.html#list-categories), [ref](http://moxfive.xyz/2015/10/25/hexo-tag-cloud/)
