@@ -44,4 +44,4 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 - [x] Change avatar
 - [ ] Process background images in photoshop
 - [ ] Change background
-- [ ] Build up my own categories page using [API](https://hexo.io/zh-cn/docs/helpers.html#list-categories), [ref](http://moxfive.xyz/2015/10/25/hexo-tag-cloud/)
+- [x] Build up my own categories page using [API](https://hexo.io/zh-cn/docs/helpers.html#list-categories), [ref](http://moxfive.xyz/2015/10/25/hexo-tag-cloud/)

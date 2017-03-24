@@ -1,7 +1,5 @@
 <hr>
 <br>
-<%- list_categories({depth: 1}) %>
-
 <p class="count"></p>
 
 <div class="tags">
@@ -15,22 +13,6 @@
     }) %>
 </div>
 <style>
-    .category-list li{
-        display: inline-block;
-        margin: 0 1em .5em 0;
-        padding: 4px;
-        border: 1px solid lightgray;
-        font-size: 1.2rem;
-    }
-    .category-list a { color: gray; }
-    .category-list-item:hover a {
-        color: gray;
-        text-decoration: none;
-    }
-    .category-list-count {
-        margin-left: 2px;
-        font-size: .9rem;
-    }
     .article-entry ul li:before{ display: none; }
     .article-inner { text-align: center; }
     .tags {
@@ -57,8 +39,9 @@
 
 <!-- Count tags and categories -->
 <p id="count">
-        <%= __('tag_cloud.already') %><span><script>document.write($(".category-list-item").length)</script></span><%= __('tag_cloud.categories') %>
+    <div>
         <%= __('tag_cloud.total') %><span><script>document.write($(".tags > a").length)</script></span><%= __('tag_cloud.tags') %>
+    </div>
 </p>
 <script>
     $('#count').appendTo('.count');

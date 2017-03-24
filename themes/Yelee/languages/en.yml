@@ -43,7 +43,7 @@ tooltip:
   Yelee: Another simple and elegant theme for Hexo
 
 tag_cloud:
-  already: " "
-  categories: Categories, 
-  total: " "
-  tags: Tags
+  already: "Total "
+  categories: " Categories"
+  total: "Total "
+  tags: " Tags"
