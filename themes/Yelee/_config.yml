@@ -277,7 +277,7 @@ visit_counter:
 leancloud:
   on: true
   site_visit: true
-  page_visit: false
+  page_visit: true
 
 # GitHub Repo Widget
 # https://github.com/hustcc/GitHub-Repo-Widget.js

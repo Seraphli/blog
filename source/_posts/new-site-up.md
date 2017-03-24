@@ -40,7 +40,7 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 
 # Next thing I need to do
 
-- [ ] Write page count code
+- [x] Write page count code
 - [x] Change avatar
 - [ ] Process background images in photoshop
 - [ ] Change background

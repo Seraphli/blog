@@ -1,0 +1,122 @@
+<% if (theme.leancloud.on) { %>
+    <% if (theme.leancloud.site_visit) { %>
+    <script>
+    function addSiteCount (Counter) {
+        var query = new AV.Query(Counter);
+        url = 'seraphli.github.io';
+        query.equalTo("url",url);
+        query.find().then(function(results) {
+            // results is an array of AV.Object.
+            if(results.length > 0)
+            {
+                var counter = results[0];
+                counter.increment("time");
+                counter.save(null, {fetchWhenSave: true});
+            }
+            else
+            {
+                var newcounter = new Counter();
+                newcounter.set("url", url)
+                newcounter.set("time", 1);
+                newcounter.save(null,{
+                    success: function(newcounter){
+                        // alert('New object created');
+                    },
+                    error: function(newcounter,error){
+                        // alert('Failed to create');
+                    }
+                });
+            }
+        }, function(error) {
+            // alert('Error:' + error.code + " " + error.message);
+        });
+    }
+    $(function(){
+        var Counter = AV.Object.extend('BlogVisit');
+        addSiteCount(Counter);
+    });
+    $(function(){
+        var Counter = AV.Object.extend('BlogVisit');
+        var query = new AV.Query(Counter);
+        url = 'seraphli.github.io';
+        query.equalTo("url",url);
+        query.find().then(function(results) {
+            var counter=results[0];
+            var c = document.getElementById("leancloud_value_site_pv");
+            c && (c.innerHTML = counter.get("time"))
+            var b = document.getElementById("leancloud_container_site_pv");
+            b && (b.style.display = "inline")
+        }, function(error) {
+            // alert('Error:' + error.code + " " + error.message);
+        });
+    });
+    <% } %>
+    <% if (theme.leancloud.page_visit) { %>
+    function GetUrlRelativePath()
+    {
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);
+
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+    function addPageCount (Counter) {
+        url = GetUrlRelativePath();
+        title = document.title.toString();
+        var query = new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find().then(function(results) {
+            // results is an array of AV.Object.
+            if(results.length > 0)
+            {
+                var counter = results[0];
+                counter.increment("time");
+                counter.save(null, {fetchWhenSave: true});
+            }
+            else
+            {
+                var newcounter = new Counter();
+                newcounter.set("title",title);
+                newcounter.set("url",url);
+                newcounter.set("time",1);
+                newcounter.save(null,{
+                    success: function(newcounter){
+                    },
+                    error: function(newcounter,error){
+                        // alert('Failed to create');
+                    }
+                });
+            }
+        }, function(error) {
+            // alert('Error:' + error.code + " " + error.message);
+        });
+    }
+    $(function(){
+        var Counter = AV.Object.extend('PageCounter');
+        addPageCount(Counter);
+    });
+    $(function(){
+        var Counter = AV.Object.extend('PageCounter');
+        var query = new AV.Query(Counter);
+        url = GetUrlRelativePath();
+        query.equalTo("url",url);
+        query.find().then(function(results) {
+            var counter=results[0];
+            var c = document.getElementById("leancloud_value_page_pv");
+            c && (c.innerHTML = counter.get("time"))
+            var b = document.getElementById("leancloud_container_page_pv");
+            b && (b.style.display = "inline")
+        }, function(error) {
+            // alert('Error:' + error.code + " " + error.message);
+        });
+
+    });
+    </script>
+    <% } %>
+<% } %>
