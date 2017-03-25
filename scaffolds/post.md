@@ -1,5 +1,7 @@
----
 title: {{ title }}
-date: {{ date }}
+author: SErAphLi
+abbrlink:
+catogories:
 tags:
+date: {{ date }}
 ---
