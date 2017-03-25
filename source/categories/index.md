@@ -1,4 +1,3 @@
----
 title: Category List
 type: "categories"
 toc: false
