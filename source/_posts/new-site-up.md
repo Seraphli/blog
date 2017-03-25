@@ -37,6 +37,8 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 
 1. YAML need to add a space after colon
 2. Don't add permalink in tags page, which will disable tags cloud
+3. On windows, if you can not open the page http://localhost:4000/, you should try to use another port, i.e. `hexo s -p 3600`, and it works for me.
+
 
 # Next thing I need to do
 
@@ -45,3 +47,11 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 - [ ] Process background images in photoshop
 - [ ] Change background
 - [x] Build up my own categories page using [API](https://hexo.io/zh-cn/docs/helpers.html#list-categories), [ref](http://moxfive.xyz/2015/10/25/hexo-tag-cloud/)
+- [x] Add bitbuket icon
+
+# Just a reminder
+
+1. git clone blog repository
+2. cnpm install
+3. cnpm install -g hexo-cli
+
