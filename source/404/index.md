@@ -1,4 +1,3 @@
----
 title: 404
 type: "404"
 toc: false

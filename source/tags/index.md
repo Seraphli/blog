@@ -1,4 +1,3 @@
----
 title: Tag Cloud
 type: "tags"
 toc: false
