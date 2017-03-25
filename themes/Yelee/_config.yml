@@ -120,7 +120,7 @@ youyan:
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
 ## "background_random": true if random choose a image from background folder
-background_image: 28
+background_image: 48
 background_random: true
 
 # Base Font Size | 字号调节
