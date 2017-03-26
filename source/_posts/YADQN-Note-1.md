@@ -16,6 +16,11 @@ I think writing code is going to be painful, so I need to write down the pains I
 
 ## DQN
 
+The algorithm consists of several parts.
+
+1. Preprocessing
+  `Working directly with raw Atari 2600 frames`, we need to convert {% math %}210 * 160{% endmath %} pixel images into {% math %}84 * 84 * 4{% endmath %} input vectors.
+2. 
 
 
 ## Todo List

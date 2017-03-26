@@ -28,9 +28,10 @@ Although it seems easy on the official website, it still has so much parts to cu
 3. hexo-deployer-git
 4. hexo-generator-seo-friendly-sitemap
 5. hexo-browsersync
+6. hexo-math
 
 ```bash
-npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo-friendly-sitemap hexo-browsersync
+npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo-friendly-sitemap hexo-browsersync hexo-math
 ```
 
 ## Some mistakes I made when building
@@ -38,7 +39,12 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 1. YAML need to add a space after colon
 2. Don't add permalink in tags page, which will disable tags cloud
 3. On windows, if you can not open the page http://localhost:4000/, you should try to use another port, i.e. `hexo s -p 3600`, and it works for me.
-
+4. Mathjax can not be render in hexo is just because underscore character `_` will be translate in markdown, so the equation will miss `_` when rendering with Mathjax. Solution: install hexo-math, and add
+  ```
+  {% math %}
+  {% endmath %}
+  ```
+  around the equation, [more][4]. Or just use `\_` to escape the markdown render.
 
 ## Next thing I need to do
 
@@ -62,3 +68,4 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 [1]: https://github.com/hexojs/hexo/issues/2474
 [2]: https://hexo.io/zh-cn/docs/helpers.html#list-categories
 [3]: http://moxfive.xyz/2015/10/25/hexo-tag-cloud/
+[4]: https://github.com/akfish/hexo-math
