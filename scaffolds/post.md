@@ -1,7 +1,7 @@
 title: {{ title }}
 author: SErAphLi
 abbrlink:
-catogories:
+categories:
 tags:
 date: {{ date }}
 ---

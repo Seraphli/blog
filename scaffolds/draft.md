@@ -1,5 +1,5 @@
 title: {{ title }}
 author: SErAphLi
-catogories:
+categories:
 tags:
 ---

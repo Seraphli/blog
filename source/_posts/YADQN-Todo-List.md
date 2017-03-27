@@ -1,0 +1,31 @@
+title: "YADQN Todo List"
+author: SErAphLi
+abbrlink: 4656ea70
+categories:
+  - YADQN
+tags:
+  - "Todo List"
+  - RL
+date: 2017-03-27 22:04:21
+description: "Here I list things and plans need to do about YADQN."
+---
+
+## Stage #1
+
+In this stage I will use a specific game, "Breakout", to test the whole structure. 
+
+- [x] Figure out the observation given by openai gym.
+- [ ] Complete preprocessing part.
+- [ ] Model architecture build.
+- [ ] Network parameter replace mechanism.
+- [ ] Original experience replay.
+- [ ] Link all part.
+- [ ] Test algorithm on game "Breakout".
+
+## Stage #2
+
+In this stage I will continue building some parts for DQN.
+
+- [ ] Test algorithm on several games.
+- [ ] Test on all games mentioned in the paper.
+- [ ] Generate last three column of Extended Data Table 2.
