@@ -83,9 +83,14 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
   ```
   Which will set the limitation of file watches to a higher one.
   PS: This problem may be caused by BrowserSync plugin. And use MathJax in local package will cause hexo react slower.
+7. A latex symbol list, [here][6]. [PDF version][7], need to overcome GFW.
+8. Indent in block quote using `&nbsp;`, [ref][8].
 
 [1]: https://github.com/hexojs/hexo/issues/2474
 [2]: https://hexo.io/zh-cn/docs/helpers.html#list-categories
 [3]: http://moxfive.xyz/2015/10/25/hexo-tag-cloud/
 [4]: https://github.com/akfish/hexo-math
 [5]: https://wall.alphacoders.com/by_sub_category.php?id=173175&name=Natsume+Yuujinchou+Wallpapers
+[6]: http://latex.wikia.com/wiki/List_of_LaTeX_symbols
+[7]: http://reu.dimacs.rutgers.edu/Symbols.pdf
+[8]: https://christianity.meta.stackexchange.com/questions/2055/is-it-possible-to-indent-within-a-markdown-block-quote
