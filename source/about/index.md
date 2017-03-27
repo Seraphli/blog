@@ -23,7 +23,8 @@ comments: false
     "South Park",
     "Gintama",
     "Ghost in the shell",
-    "EVANGELION"
+    "EVANGELION",
+    "Natsume Yuujinchou"
   ],
   "Movie": [
     "The Matrix",

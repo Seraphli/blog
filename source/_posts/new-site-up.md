@@ -45,6 +45,7 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
   {% endmath %}
   ```
   around the equation, [more][4]. Or just use `\_` to escape the markdown render.
+5. Don't use local package of MathJax, because the website on github will have render problem.
 
 ## Next thing I need to do
 
@@ -57,15 +58,34 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 - [x] Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to "left stands for previous and right stands for next". Fix: it is a issue of hexo. [Issue related][1].
 - [x] Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about `.article-entry > ol:last-child`, just delete it, otherwise it will render every article's last list in a different way, which is quite annoying.
 - [x] Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)
+- [ ] Add Natsume Yuujinchou wallpapers
 
 ## Just a reminder
 
 1. git clone blog repository
 2. cnpm install
 3. cnpm install -g hexo-cli
-4. replace `node_modules/hexo/lib/plugins/generator/post.js` with `post.js`. [Issue related][1].
+4. Replace `node_modules/hexo/lib/plugins/generator/post.js` with `post.js`. [Issue related][1].
+5. The plugin `hexo_deployer_git` is not working well. I have to set the config in `.deploy_git/.git` manually.
+  ```
+  [branch "master"]
+    remote = https://github.com/Seraphli/seraphli.github.io.git
+    merge = refs/heads/master
+  [credential]
+    helper = store
+  [receive]
+    denyNonFastforwards = false # change to false to enable overwriting
+  ```
+6. Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error 'FATAL watch ENOSPC'.
+  Solution:
+  ```bash
+  echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+  ```
+  Which will set the limitation of file watches to a higher one.
+  PS: This problem may be caused by BrowserSync plugin. And use MathJax in local package will cause hexo react slower.
 
 [1]: https://github.com/hexojs/hexo/issues/2474
 [2]: https://hexo.io/zh-cn/docs/helpers.html#list-categories
 [3]: http://moxfive.xyz/2015/10/25/hexo-tag-cloud/
 [4]: https://github.com/akfish/hexo-math
+[5]: https://wall.alphacoders.com/by_sub_category.php?id=173175&name=Natsume+Yuujinchou+Wallpapers
