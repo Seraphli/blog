@@ -1,4 +1,4 @@
-title: Our Creed
+title: "Our Creed"
 toc: false
 ---
 

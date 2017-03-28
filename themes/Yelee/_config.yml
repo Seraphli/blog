@@ -8,6 +8,7 @@ Yelee: "3.5"
 ## Tags Cloud Page: `hexo new page tags`
 menu:
   Main: /
+  Creed: /creed/
   Projects: /projects/
   Archives: /archives/
   Categories: /categories/
@@ -121,7 +122,7 @@ youyan:
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
 ## "background_random": true if random choose a image from background folder
-background_image: 48
+background_image: 56
 background_random: true
 
 # Base Font Size | 字号调节
