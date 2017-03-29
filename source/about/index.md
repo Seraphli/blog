@@ -1,7 +1,8 @@
 title: About
 toc: false
-comments: false
 ---
+
+## About Me
 
 ```json
 {
@@ -31,7 +32,14 @@ comments: false
     "The Lord of the Rings"
   ],
   "Series": [
-    "Person of Interest"
+    "Person of Interest",
+    "Game of Thrones"
   ]
 }
 ```
+
+## What I like
+
+{% blockquote Faceless Men, Game of Thrones %}
+Valar Morghulis. Valar Dohaeris.
+{% endblockquote %}
