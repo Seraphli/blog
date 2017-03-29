@@ -20,7 +20,7 @@ I think writing code is going to be painful, so I need to write down the pains I
 The main goal of DQN is to estimate accumulate reward, known as Q-value, using deep neural network. The algorithm consists of several parts.
 
 1. Preprocessing
-  `Working directly with raw Atari 2600 frames`, we need to convert {% math %}210 \times 160{% endmath %} pixel images into {% math %}84 \times 84 \times 4{% endmath %} input vectors.
+  `Working directly with raw Atari 2600 frames`, we need to convert {% math %}210 \times 160 \times 3{% endmath %} pixel images into {% math %}84 \times 84 \times 4{% endmath %} input vectors.
 2. Neural Network
   Input demension of network is {% math %}84 \times 84 \times 4{% endmath %}. `The output layer is a fully-connected linear layer with a single output for each valid action. The number of valid actions varied between 4 and 18 on the games we considered.`
 3. Experience Replay
