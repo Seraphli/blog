@@ -58,9 +58,10 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
 - [x] Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to "left stands for previous and right stands for next". Fix: it is a issue of hexo. [Issue related][1].
 - [x] Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about `.article-entry > ol:last-child`, just delete it, otherwise it will render every article's last list in a different way, which is quite annoying.
 - [x] Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)
-- [x] Add Natsume Yuujinchou wallpapers
-- [x] Add Game of Throne wallpapers
+- [x] Add Natsume Yuujinchou wallpapers.
+- [x] Add Game of Throne wallpapers.
 - [x] Add Assassin's Creed lines in About page.
+- [ ] Process the image `Initiation Ceremony`.
 
 ## Just a reminder
 

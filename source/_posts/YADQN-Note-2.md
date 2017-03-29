@@ -1,4 +1,4 @@
-title: 'YADQN Note #2'
+title: "YADQN Note #2"
 author: SErAphLi
 abbrlink: 56c32fc8
 categories:
@@ -7,6 +7,7 @@ tags:
   - Note
   - RL
 date: 2017-03-27 22:20:24
+description: "Notes while building YADQN"
 ---
 
 ## Reminder
@@ -29,9 +30,12 @@ date: 2017-03-27 22:20:24
 8. You can use `tf.image.convert_image_dtype` to convert image.
 9. Y channel in the paper just means converting RGB image into grayscale image.
 10. `PIL.Image.Show()` don't show any window. Solution: `sudo apt-get install imagemagick`. [Reference][5]. `Image.fromarray` need uint8 image.
+11. Maybe using queue is not a good idea, because we need to get 4 images in one time.
+12. There is a timeline module which can be imported using `from tensorflow.python.client import timeline`. [Reference][6].
 
 [1]: https://gym.openai.com/envs/Breakout-v0
 [2]: https://www.tensorflow.org/programmers_guide/threading_and_queues
 [3]: http://www.voidcn.com/blog/lujiandong1/article/p-6325966.html
 [4]: https://www.tensorflow.org/api_docs/python/tf/stack
 [5]: http://stackoverflow.com/questions/16279441/image-show-wont-display-the-picture
+[6]: http://www.cnblogs.com/xuchenCN/p/5888646.html

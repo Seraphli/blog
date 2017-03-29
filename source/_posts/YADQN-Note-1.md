@@ -8,6 +8,7 @@ tags:
   - RL
 date: 2017-03-25 20:17:00
 ---
+
 ## Things
 
 I will going to build the algorithm known as DQN. I decide to use [openai gym][1] to reproduce the result described in [Human-level control through deep reinforcement learning][2]. The article can be download from [here][3] for free.
