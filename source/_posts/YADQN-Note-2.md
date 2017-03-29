@@ -32,6 +32,7 @@ description: "Notes while building YADQN"
 10. `PIL.Image.Show()` don't show any window. Solution: `sudo apt-get install imagemagick`. [Reference][5]. `Image.fromarray` need uint8 image.
 11. Maybe using queue is not a good idea, because we need to get 4 images in one time.
 12. There is a timeline module which can be imported using `from tensorflow.python.client import timeline`. [Reference][6].
+13. You can not use `tf.layers.conv2d` function because this function don't contain `collection_name` parameter. It will cause some troubles when trying to replace network parameters.
 
 [1]: https://gym.openai.com/envs/Breakout-v0
 [2]: https://www.tensorflow.org/programmers_guide/threading_and_queues

@@ -15,7 +15,7 @@ description: "Here I list things and plans need to do about YADQN."
 In this stage I will use a specific game, "Breakout", to test the whole structure. 
 
 - [x] Figure out the observation given by openai gym.
-- [ ] Complete preprocessing part.
+- [x] Complete preprocessing part.
 - [ ] Model architecture build.
 - [ ] Network parameter replace mechanism.
 - [ ] Original experience replay.

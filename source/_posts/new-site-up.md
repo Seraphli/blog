@@ -79,7 +79,7 @@ npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo
   [receive]
     denyNonFastforwards = false # change to false to enable overwriting
   ```
-6. Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error 'FATAL watch ENOSPC'.
+6. Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error `FATAL watch ENOSPC`.
   Solution:
   ```bash
   echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
