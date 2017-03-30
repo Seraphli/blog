@@ -34,6 +34,8 @@ description: "Notes while building YADQN"
 12. There is a timeline module which can be imported using `from tensorflow.python.client import timeline`. [Reference][6].
 13. You can not use `tf.layers.conv2d` function because this function don't contain `collection_name` parameter. It will cause some troubles when trying to replace network parameters.
 14. [Here][7] are some codes about epsilon decay. It also contain experience replay code.
+15. A strange thing: when the action is `0`, the environment of openai gym don't change; when the action is `1`, the agent's action is waiting.
+16. This [repo][8] contain [dqn][9] and [a3c][10].
 
 ## Changes
 
@@ -46,3 +48,6 @@ description: "Notes while building YADQN"
 [5]: http://stackoverflow.com/questions/16279441/image-show-wont-display-the-picture
 [6]: http://www.cnblogs.com/xuchenCN/p/5888646.html
 [7]: http://web.stanford.edu/class/cs20si/lectures/slides_14.pdf
+[8]: https://github.com/ppwwyyxx/tensorpack
+[9]: https://github.com/ppwwyyxx/tensorpack/tree/master/examples/DeepQNetwork
+[10]: https://github.com/ppwwyyxx/tensorpack/tree/master/examples/A3C-Gym
