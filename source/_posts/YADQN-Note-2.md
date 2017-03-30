@@ -33,6 +33,11 @@ description: "Notes while building YADQN"
 11. Maybe using queue is not a good idea, because we need to get 4 images in one time.
 12. There is a timeline module which can be imported using `from tensorflow.python.client import timeline`. [Reference][6].
 13. You can not use `tf.layers.conv2d` function because this function don't contain `collection_name` parameter. It will cause some troubles when trying to replace network parameters.
+14. [Here][7] are some codes about epsilon decay. It also contain experience replay code.
+
+## Changes
+
+1. `squared gradient momentum` and `min squared momentum` can not be found in tensorflow. So this two values are not presented in code.
 
 [1]: https://gym.openai.com/envs/Breakout-v0
 [2]: https://www.tensorflow.org/programmers_guide/threading_and_queues
@@ -40,3 +45,4 @@ description: "Notes while building YADQN"
 [4]: https://www.tensorflow.org/api_docs/python/tf/stack
 [5]: http://stackoverflow.com/questions/16279441/image-show-wont-display-the-picture
 [6]: http://www.cnblogs.com/xuchenCN/p/5888646.html
+[7]: http://web.stanford.edu/class/cs20si/lectures/slides_14.pdf

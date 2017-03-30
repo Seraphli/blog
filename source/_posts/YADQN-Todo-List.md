@@ -19,6 +19,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [ ] Model architecture build.
 - [ ] Network parameter replace mechanism.
 - [ ] Original experience replay.
+- [ ] Epsilon decay.
 - [ ] Link all part.
 - [ ] Test algorithm on game "Breakout".
 
@@ -26,6 +27,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 
 In this stage I will continue building some parts for DQN.
 
+- [ ] Add Tensorflow tensorboard support.
 - [ ] Test algorithm on several games.
 - [ ] Test on all games mentioned in the paper.
 - [ ] Generate last three column of Extended Data Table 2.
