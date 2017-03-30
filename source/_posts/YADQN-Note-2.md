@@ -37,6 +37,8 @@ description: "Notes while building YADQN"
 15. A strange thing: when the action is `0`, the environment of openai gym don't change; when the action is `1`, the agent's action is waiting.
 16. This [repo][8] contain [dqn][9] and [a3c][10].
 17. Python `with` statement, `contextmanager` and `yield`, [link][11].
+18. Avoid `sess.run` will significantly improve the performance.
+19. `env.render()` raise an error. Because you can not call initialization of tensorflow before `env.render()`. [Reference][12].
 
 ## Changes
 
@@ -53,3 +55,4 @@ description: "Notes while building YADQN"
 [9]: https://github.com/ppwwyyxx/tensorpack/tree/master/examples/DeepQNetwork
 [10]: https://github.com/ppwwyyxx/tensorpack/tree/master/examples/A3C-Gym
 [11]: http://preshing.com/20110920/the-python-with-statement-by-example/
+[12]: https://github.com/openai/gym/issues/418
