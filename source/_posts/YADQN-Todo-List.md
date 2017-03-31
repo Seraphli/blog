@@ -16,10 +16,10 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 
 - [x] Figure out the observation given by openai gym.
 - [x] Complete preprocessing part.
-- [ ] Model architecture build.
-- [ ] Network parameter replace mechanism.
+- [x] Model architecture build.
+- [x] Network parameter replace mechanism.
 - [ ] Original experience replay.
-- [ ] Epsilon decay.
+- [x] Epsilon decay.
 - [ ] Link all part.
 - [ ] Test algorithm on game "Breakout".
 
