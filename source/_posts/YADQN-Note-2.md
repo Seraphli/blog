@@ -39,6 +39,15 @@ description: "Notes while building YADQN"
 17. Python `with` statement, `contextmanager` and `yield`, [link][11].
 18. Avoid `sess.run` will significantly improve the performance.
 19. `env.render()` raise an error. Because you can not call initialization of tensorflow before `env.render()`. [Reference][12].
+20. In tensorflow, you have to define all ops in the beginning, otherwise memory usage will continuously increase. Use `sess.graph.finalize()` to see if you define ops below finalize.
+21. Tensorflow will only update variable after `sess.run(ops)`, no matter how `op` in `ops` arrange.
+22. You have to excute some operations before others.
+  ```python
+  self._sess.run(self._max_img_update, feed_dict={self._input: input_img})
+  self._sess.run(self._update, feed_dict={self._input: input_img})
+  ```
+  If you excute maximizing two images and excute storing last image in the same time, it will result in `_max_img` and `_last` have same value.
+23. After define all operation before `sess.graph.finalize()`, the code run much faster than before, and there is no memory leak problem.
 
 ## Changes
 
