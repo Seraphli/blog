@@ -21,6 +21,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [ ] Original experience replay.
 - [x] Epsilon decay.
 - [ ] Link all part.
+- [ ] Add debug information output.
 - [ ] Test algorithm on game "Breakout".
 
 ## Stage #2
