@@ -48,6 +48,7 @@ description: "Notes while building YADQN"
   ```
   If you excute maximizing two images and excute storing last image in the same time, it will result in `_max_img` and `_last` have same value.
 23. After define all operation before `sess.graph.finalize()`, the code run much faster than before, and there is no memory leak problem.
+24. While using deque as buffer of experience replay, there is a [problem][13] related to python version. There is no problem when you use python 2.7 or 3.5, but you will get a error while using python 3.4.
 
 ## Changes
 
@@ -65,3 +66,4 @@ description: "Notes while building YADQN"
 [10]: https://github.com/ppwwyyxx/tensorpack/tree/master/examples/A3C-Gym
 [11]: http://preshing.com/20110920/the-python-with-statement-by-example/
 [12]: https://github.com/openai/gym/issues/418
+[13]: http://stackoverflow.com/questions/40181284/how-to-get-random-sample-from-deque-in-python-3
