@@ -48,7 +48,11 @@ description: "Notes while building YADQN"
   ```
   If you excute maximizing two images and excute storing last image in the same time, it will result in `_max_img` and `_last` have same value.
 23. After define all operation before `sess.graph.finalize()`, the code run much faster than before, and there is no memory leak problem.
-24. While using deque as buffer of experience replay, there is a [problem][13] related to python version. There is no problem when you use python 2.7 or 3.5, but you will get a error while using python 3.4.
+24. While using deque as buffer of experience replay, there is a [problem][13] related to python version. There is no problem when you use python 2.7 or 3.5, but you will get a error while using python 3.4. Update my environment to python 3.5 fix this problem. But still there are some dependency needed to be installed.
+  ```
+  sudo apt-get install libssl-dev
+  sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
+  ```
 
 ## Changes
 
