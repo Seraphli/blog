@@ -18,10 +18,11 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [x] Complete preprocessing part.
 - [x] Model architecture build.
 - [x] Network parameter replace mechanism.
-- [ ] Original experience replay.
+- [x] Original experience replay.
 - [x] Epsilon decay.
-- [ ] Link all part.
-- [ ] Add debug information output.
+- [x] Link all part.
+- [x] Add debug information output.
+- [ ] Save session parameter.
 - [ ] Test algorithm on game "Breakout".
 
 ## Stage #2
