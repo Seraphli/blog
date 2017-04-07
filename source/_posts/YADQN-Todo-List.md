@@ -22,7 +22,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [x] Epsilon decay.
 - [x] Link all part.
 - [x] Add debug information output.
-- [ ] Save session parameter.
+- [x] Save session parameter.
 - [ ] Test algorithm on game "Breakout".
 
 ## Stage #2
