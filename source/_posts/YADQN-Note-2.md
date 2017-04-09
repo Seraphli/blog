@@ -53,10 +53,13 @@ description: "Notes while building YADQN"
   sudo apt-get install libssl-dev
   sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
   ```
+25. Running this code require about 6GB memory for the experience replay. So I upgrade my PC building.
+26. While training, loss always stay low, but the performance of the network is not well.
 
 ## Changes
 
 1. `squared gradient momentum` and `min squared momentum` can not be found in tensorflow. So this two values are not presented in code.
+2. Because the code require too much memory, I change the experience replay size from 1000000 to 100000, replay start size from 50000 to 5000, and others remain the same.
 
 [1]: https://gym.openai.com/envs/Breakout-v0
 [2]: https://www.tensorflow.org/programmers_guide/threading_and_queues
