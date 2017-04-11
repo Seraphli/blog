@@ -23,6 +23,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [x] Link all part.
 - [x] Add debug information output.
 - [x] Save session parameter.
+- [ ] Random start (no op).
 - [ ] Test algorithm on game "Breakout".
 
 ## Stage #2
