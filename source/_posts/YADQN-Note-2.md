@@ -55,6 +55,8 @@ description: "Notes while building YADQN"
   ```
 25. Running this code require about 6GB memory for the experience replay. So I upgrade my PC building.
 26. While training, loss always stay low, but the performance of the network is not well.
+27. [Example][14] about how to set the speed of environment in openai gym. But configure method has been removed, but you can set mode in render method. And disable rendering game will speed up the training process.
+28. Deque size larger than 65535 may cause memory exploded.
 
 ## Changes
 
@@ -74,3 +76,4 @@ description: "Notes while building YADQN"
 [11]: http://preshing.com/20110920/the-python-with-statement-by-example/
 [12]: https://github.com/openai/gym/issues/418
 [13]: http://stackoverflow.com/questions/40181284/how-to-get-random-sample-from-deque-in-python-3
+[14]: https://github.com/openai/gym/issues/185
