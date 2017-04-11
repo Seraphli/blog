@@ -25,12 +25,19 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [x] Save session parameter.
 - [ ] Random start (no op).
 - [ ] Test algorithm on game "Breakout".
+- [ ] Configuration setup for algorithm.
 
 ## Stage #2
 
 In this stage I will continue building some parts for DQN.
 
 - [ ] Add Tensorflow tensorboard support.
-- [ ] Test algorithm on several games.
-- [ ] Test on all games mentioned in the paper.
-- [ ] Generate last three column of Extended Data Table 2.
+- [x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)
+- [x] Test on all games mentioned in the paper. (Same reason)
+- [x] Generate last three column of Extended Data Table 2. (Same reason)
+
+## Stage #3
+
+- [ ] Double DQN Implement
+- [ ] Prioritized Experience Replay
+- [ ] Dueling network
