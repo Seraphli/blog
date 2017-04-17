@@ -58,6 +58,7 @@ description: "Notes while building YADQN"
 27. [Example][14] about how to set the speed of environment in openai gym. But configure method has been removed, but you can set mode in render method. And disable rendering game will speed up the training process.
 28. Deque size larger than 65535 may cause memory exploded.
 29. Strange thing is that I have to wait for about 100000 runs of game, and there is no improvement of the performance.
+30. One transition in experience replay will take {% math %}4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800{% endmath %} Bytes, which is about 220KB.
 
 ## Changes
 
