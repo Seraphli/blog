@@ -59,6 +59,7 @@ description: "Notes while building YADQN"
 28. Deque size larger than 65535 may cause memory exploded.
 29. Strange thing is that I have to wait for about 100000 runs of game, and there is no improvement of the performance.
 30. One transition in experience replay will take {% math %}4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800{% endmath %} Bytes, which is about 220KB.
+31. Some repositories about DQN are using another memory mechanism. They store `(s, a, r, is_terminal)` in memory, and `s` just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.
 
 ## Changes
 

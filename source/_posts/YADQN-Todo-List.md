@@ -38,6 +38,8 @@ In this stage I will continue building some parts for DQN.
 
 ## Stage #3
 
+- [ ] Implement another memory mechanism
 - [ ] Double DQN Implement
 - [ ] Prioritized Experience Replay
 - [ ] Dueling network
+- [ ] DQfD
