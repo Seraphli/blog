@@ -46,4 +46,6 @@ In this stage I will continue building some parts for DQN.
 
 ## DQfQ
 
-- [ ] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames.
+- [x] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don't have frame skip. [Link][1]
+
+[1]: https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350
