@@ -43,3 +43,7 @@ In this stage I will continue building some parts for DQN.
 - [ ] Prioritized Experience Replay
 - [ ] Dueling network
 - [ ] DQfD
+
+## DQfQ
+
+- [ ] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames.
