@@ -39,14 +39,21 @@ In this stage I will continue building some parts for DQN.
 ## Stage #3
 
 - [ ] Implement another memory mechanism
-- [ ] Double DQN Implement
+- [ ] Double DQN Implementation
 - [ ] Prioritized Experience Replay
 - [ ] Dueling network
 - [ ] DQfD
 
+
+## Double DQN
+
+- [ ] Algorithm Implementation
+
 ## DQfQ
 
 - [x] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don't have frame skip. [Link][1]
-- [ ] Store for experience replay and demostration replay.
+- [x] Store for experience replay and demostration replay.
+- [x] Display replay file in pygame.
+- [ ] Test algorithm.
 
 [1]: https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350
