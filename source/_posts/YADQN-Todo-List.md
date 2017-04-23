@@ -44,11 +44,12 @@ In this stage I will continue building some parts for DQN.
 - [ ] Dueling network
 - [ ] DQfD
 - [ ] Store reported score in papers in the repo, and display them
-
+- [ ] Model evaluation
 
 ## Double DQN
 
 - [ ] Algorithm Implementation
+- [ ] Test training
 
 ## DQfQ
 
