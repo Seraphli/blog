@@ -32,6 +32,7 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 In this stage I will continue building some parts for DQN.
 
 - [x] Add Tensorflow tensorboard support.
+- [ ] Display weight
 - [x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)
 - [x] Test on all games mentioned in the paper. (Same reason)
 - [x] Generate last three column of Extended Data Table 2. (Same reason)
