@@ -24,29 +24,39 @@ In this stage I will use a specific game, "Breakout", to test the whole structur
 - [x] Add debug information output.
 - [x] Save session parameter.
 - [ ] Random start (no op).
-- [ ] Test algorithm on game "Breakout".
-- [ ] Configuration setup for algorithm.
+- [x] Test algorithm on game "Breakout".
+- [x] Configuration setup for algorithm.
 
 ## Stage #2
 
 In this stage I will continue building some parts for DQN.
 
-- [ ] Add Tensorflow tensorboard support.
+- [x] Add Tensorflow tensorboard support.
+- [ ] Display weight
 - [x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)
 - [x] Test on all games mentioned in the paper. (Same reason)
 - [x] Generate last three column of Extended Data Table 2. (Same reason)
 
 ## Stage #3
 
-- [ ] Implement another memory mechanism
-- [ ] Double DQN Implement
+- [x] Implement another memory mechanism
+- [ ] Double DQN Implementation
 - [ ] Prioritized Experience Replay
 - [ ] Dueling network
 - [ ] DQfD
+- [ ] Store reported score in papers in the repo, and display them
+- [ ] Model evaluation
+
+## Double DQN
+
+- [ ] Algorithm Implementation
+- [ ] Test training
 
 ## DQfQ
 
 - [x] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don't have frame skip. [Link][1]
-- [ ] Store for experience replay and demostration replay.
+- [x] Store for experience replay and demostration replay.
+- [x] Display replay file in pygame.
+- [ ] Test algorithm.
 
 [1]: https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350

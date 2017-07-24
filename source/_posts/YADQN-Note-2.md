@@ -61,11 +61,13 @@ description: "Notes while building YADQN"
 30. One transition in experience replay will take {% math %}4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800{% endmath %} Bytes, which is about 220KB.
 31. Some repositories about DQN are using another memory mechanism. They store `(s, a, r, is_terminal)` in memory, and `s` just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.
 32. I got this warning today `The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.`. And I search it on the net. Some say it means build tensorflow from source can speed up CPU computations. I might try to build one day.
+33. Using lzma package, you need to compile python with lzma support. `sudo apt install build-essential zlib1g-dev libbz2-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev`
 
 ## Changes
 
 1. `squared gradient momentum` and `min squared momentum` can not be found in tensorflow. So this two values are not presented in code.
 2. Because the code require too much memory, I change the experience replay size from 1000000 to 100000, replay start size from 50000 to 5000, and others remain the same.
+3. My new implement of memory significantly reduce usage of phisical memory, and enable us to using the original replay size of DQN.
 
 [1]: https://gym.openai.com/envs/Breakout-v0
 [2]: https://www.tensorflow.org/programmers_guide/threading_and_queues
