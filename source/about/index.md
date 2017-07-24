@@ -18,6 +18,7 @@ toc: false
     "Dota 2",
     "Total War Franchise",
     "Watch Dogs Franchise",
+    "The Witcher Franchise",
     "Indie Games"
   ],
   "Anime": [
